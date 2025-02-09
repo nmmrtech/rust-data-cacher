@@ -8,9 +8,11 @@ pipeline {
                 }
             }
         }
-        stage('Welcome Step1') {
+        stage('Run Test Cases') {
             steps { 
-                echo 'Welcome to LambdaTest'
+                script {
+                    sh 'cargo test'
+                }
             }
         }
         stage('Welcome Step2') {

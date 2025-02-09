@@ -1,5 +1,10 @@
 use actix_web::{get, App, HttpServer, Responder, HttpResponse};
 use hostname::get;
+mod tests; // Includes the tests.rs file
+
+pub fn add(left: usize, right: usize) -> usize {
+    left + right
+}
 
 #[get("/")]
 async fn index() -> impl Responder {

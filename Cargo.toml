@@ -1,5 +1,5 @@
 [package]
-name = "rust-data-cacher"
+name = "rust_data_cacher"
 version = "0.1.0"
 edition = "2021"
 
