@@ -15,9 +15,9 @@ pipeline {
                 }
             }
         }
-        stage('Welcome Step2') {
-            steps { 
-                echo 'Welcome to LambdaTest'
+        stage('Code Coverage') {
+            script {
+                sh 'cargo coverage'
             }
         }
     }
