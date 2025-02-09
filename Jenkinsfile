@@ -16,9 +16,10 @@ pipeline {
             }
         }
         stage('Code Coverage') {
-        steps {
-            script {
-                sh 'cargo coverage'
+            steps {
+                script {
+                    sh 'cargo coverage'
+                }
             }
         }
     }
