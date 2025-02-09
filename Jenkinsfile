@@ -18,7 +18,7 @@ pipeline {
         stage('Code Coverage') {
             steps {
                 script {
-                    sh 'cargo coverage'
+                    sh 'cargo llvm-cov --doctests --html'
                 }
             }
         }
