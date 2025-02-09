@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Check Rust Dependencies') {
             steps { 
-                cargo audit
+                script {
+                    sh 'cargo audit'
+                }
             }
         }
         stage('Welcome Step1') {
