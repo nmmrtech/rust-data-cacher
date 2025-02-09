@@ -23,6 +23,7 @@ pipeline {
                         sh 'cargo llvm-cov --doctests --html'
                     }
                 }
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/llvm-cov/html/', reportFiles: 'index.html', reportName: 'Code Coverage HTML Report', reportTitles: '', useWrapperFileDirectly: true])
             }
         }
     }
