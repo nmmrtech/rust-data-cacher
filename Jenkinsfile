@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Welcome Step') {
+        stage('Check Rust Dependencies') {
             steps { 
-                echo 'Welcome to LambdaTest'
+                cargo audit
             }
         }
         stage('Welcome Step1') {
